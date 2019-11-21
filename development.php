@@ -266,6 +266,16 @@ require("include/head.php");
         grid-template-columns: 1fr;
         width:400px;
     }
+    .task_complete_pattern{
+        display: block;
+    }
+    .task_complete_pattern>p{
+        background: rgba(50, 50, 50, 0.6);
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 400px;
+        text-align: center;
+    }
 }
 </style>
 <body>

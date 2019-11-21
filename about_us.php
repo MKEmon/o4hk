@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php 
-$title = "ABOUT US";
+$title = "About October4";
 
 require("include/head.php");
 ?>

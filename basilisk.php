@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-$title = "BASILISK";
+$title = "Mosko Moto | Basilisk";
 require("include/head.php");
 ?>
 </head>

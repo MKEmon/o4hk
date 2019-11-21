@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <?php 
-$title = "CAREER";
+$title = "Career | October4";
 
 require("include/head.php");
 ?>

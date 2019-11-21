@@ -1,0 +1,623 @@
+@-webkit-keyframes modal-animate-in {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes modal-animate-out {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+body.modal-prevent-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  display: none;
+}
+.modal .modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+}
+.modal .modal-content {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  height: 80%;
+  top: 10%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.modal .modal-view {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.modal .modal-view.modal-view-active {
+  left: 0;
+}
+.modal .modal-view.animate-in {
+  -webkit-animation: 0.5s ease-in-out modal-animate-in;
+  animation: 0.5s ease-in-out modal-animate-in;
+}
+.modal .modal-view.animate-out {
+  -webkit-animation: 0.5s ease-in-out modal-animate-out;
+  animation: 0.5s ease-in-out modal-animate-out;
+}
+.modal .modal-view.animate-reverse-in {
+  -webkit-animation: 0.5s ease-in-out reverse modal-animate-out;
+  animation: 0.5s ease-in-out reverse modal-animate-out;
+}
+.modal .modal-view.animate-reverse-out {
+  -webkit-animation: 0.5s ease-in-out reverse modal-animate-in;
+  animation: 0.5s ease-in-out reverse modal-animate-in;
+}
+.modal .modal-header {
+  background-color: #400090;
+  position: relative;
+  height: 60px;
+  padding: 20px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #e6e7e8;
+}
+.modal .modal-header .modal-close {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 21px;
+  cursor: pointer;
+}
+.modal .modal-has-header .modal-view {
+  top: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .modal .modal-content {
+    height: 100%;
+    top: 0;
+  }
+}
+#app-password-modal .app-password-list-header {
+  padding: 15px 10px;
+  background-color: #efefef;
+}
+#app-password-modal .generate-app-header {
+  padding: 21px;
+}
+#app-password-modal .loading-indicator {
+  display: none;
+}
+#app-password-modal .is-loading .loading-indicator {
+  display: inline-block;
+}
+#app-password-modal .is-loading .loading-hide {
+  display: none;
+}
+#app-password-modal .app-password {
+  border-bottom: 1px solid #cccccc;
+}
+#app-password-modal .app-password:first-child {
+  border-top: 1px solid #cccccc;
+}
+#app-password-modal .app-password .app-password-content {
+  padding: 15px;
+}
+#app-password-modal .app-password .app-password-name {
+  font-size: 18px;
+}
+#app-password-modal .app-password .app-password-last-used {
+  color: #808080;
+}
+#app-password-modal .app-password .app-password-created {
+  color: #808080;
+}
+#app-password-modal .app-key-selector {
+  display: inline-block;
+}
+#app-password-modal .app-password-header {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+#app-password-modal .app-password-instructions-header {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#app-password-modal .app-password-create-status {
+  display: none;
+  margin: 15px 15px 0;
+}
+#app-password-modal .app-password-delete-status {
+  display: none;
+}
+#app-password-modal .app-password-display-container {
+  margin-bottom: 20px;
+}
+#app-password-modal .app-password-display-container .app-password-display {
+  padding: 20px;
+  border: 1px solid #198fff;
+  font-size: 24px;
+  font-weight: 700;
+  color: #198fff;
+  text-align: center;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+#app-password-modal .app-password-display-container .copy-button.btn {
+  display: none;
+  padding: 10px;
+  border-radius: 0 0 4px 4px;
+  text-align: center;
+}
+#app-password-modal .app-password-display-container .copy {
+  display: block;
+}
+#app-password-modal .app-password-display-container .copied {
+  display: none;
+}
+#app-password-modal .app-password-display-container.clipboard-can-copy .copy-button.btn {
+  display: block;
+}
+#app-password-modal .app-password-display-container.clipboard-can-copy .app-password-display {
+  border-radius: 4px 4px 0 0;
+}
+#app-password-modal .app-password-display-container.clipboard-copied .app-password-display {
+  color: #1baf57;
+  border-color: #1baf57;
+  transition: all 0.1s;
+}
+#app-password-modal .app-password-display-container.clipboard-copied .copy-button.btn {
+  background-color: #1baf57;
+  border-color: #1baf57;
+  transition: all 0.1s;
+}
+#app-password-modal .app-password-display-container.clipboard-copied .copy {
+  display: none;
+}
+#app-password-modal .app-password-display-container.clipboard-copied .copied {
+  display: block;
+}
+#app-password-modal .app-password-display-container:hover .copy-button.btn {
+  border-color: #4ca9ff;
+  background-color: #4ca9ff;
+}
+#app-password-modal .app-password-display-container:hover .app-password-display {
+  color: #4ca9ff;
+  border-color: #4ca9ff;
+}
+#app-password-modal .no-passwords-text {
+  display: none;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+}
+#app-password-modal .app-password-template {
+  display: none;
+}
+#app-password-modal form.delete-app-password-form {
+  padding: 0;
+  margin: 0;
+}
+#app-password-modal input.custom-app-password-input {
+  display: none;
+  height: 44px;
+  width: 100%;
+  padding: 10px;
+  border-right: none;
+}
+#app-password-modal #app-name-selector {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  font-size: 16px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  z-index: 30;
+}
+#app-password-modal #app-name-selector.name-placeholder {
+  color: #aaaaaa;
+}
+#app-password-modal form.app-password-create-form {
+  padding-left: 0;
+}
+#app-password-modal .app-password-create-block {
+  overflow: hidden;
+  padding: 15px 130px 15px 15px;
+  position: relative;
+}
+#app-password-modal .app-password-create-block.app-password-show-other {
+  padding: 15px 130px 15px 115px;
+}
+#app-password-modal .app-password-create-block.app-password-show-other .app-selector-wrapper {
+  width: 100px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-right: none;
+}
+#app-password-modal .app-password-create-block.app-password-show-other .custom-app-password-input {
+  display: block;
+}
+#app-password-modal .app-selector-wrapper {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px 0 0 2px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#app-password-modal .app-selector-wrapper:after {
+  content: '';
+  height: 0;
+  width: 0;
+  border-top: 8px solid #e5e5e5;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  z-index: 10;
+}
+#app-password-modal .generate-password-view {
+  padding: 20px;
+  width: 100%;
+}
+#app-password-modal .setup-button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 115px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.4em;
+  text-align: center;
+  border-radius: 0 2px 2px 0;
+}
+#app-password-modal ol.instructions {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+#app-password-modal ol.instructions li {
+  margin-bottom: 10px;
+}
+#app-password-modal .done-button {
+  padding: 10px;
+  text-align: center;
+}
+#app-password-modal .confirm-delete-button-container {
+  text-align: center;
+}
+#app-password-modal .confirm-delete-button-container .loading-indicator {
+  font-size: 24px;
+}
+#app-password-modal .remove-password-view {
+  padding: 20px;
+}
+#app-password-modal .remove-password-view .confirm-delete-password-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#app-password-modal .remove-password-view .app-password-to-delete {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+#app-password-modal .remove-password-view .app-password-to-delete .app-password-name {
+  font-size: 18px;
+}
+#app-password-modal .remove-password-view .app-password-to-delete .app-password-last-used {
+  color: #808080;
+}
+#app-password-modal .remove-password-view .app-password-to-delete .app-password-created {
+  color: #808080;
+}
+#app-password-modal .remove-password-view .confirm-delete-password-description {
+  margin-bottom: 20px;
+}
+#app-password-modal .remove-password-view .cancel-delete-button {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+#app-password-modal .remove-password-view .delete-password-button {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@-webkit-keyframes modal-animate-in {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes modal-animate-out {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+body.modal-prevent-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+  display: none;
+}
+.modal .modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.8;
+}
+.modal .modal-content {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  height: 80%;
+  top: 10%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.modal .modal-view {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.modal .modal-view.modal-view-active {
+  left: 0;
+}
+.modal .modal-view.animate-in {
+  -webkit-animation: 0.5s ease-in-out modal-animate-in;
+  animation: 0.5s ease-in-out modal-animate-in;
+}
+.modal .modal-view.animate-out {
+  -webkit-animation: 0.5s ease-in-out modal-animate-out;
+  animation: 0.5s ease-in-out modal-animate-out;
+}
+.modal .modal-view.animate-reverse-in {
+  -webkit-animation: 0.5s ease-in-out reverse modal-animate-out;
+  animation: 0.5s ease-in-out reverse modal-animate-out;
+}
+.modal .modal-view.animate-reverse-out {
+  -webkit-animation: 0.5s ease-in-out reverse modal-animate-in;
+  animation: 0.5s ease-in-out reverse modal-animate-in;
+}
+.modal .modal-header {
+  background-color: #400090;
+  position: relative;
+  height: 60px;
+  padding: 20px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #e6e7e8;
+}
+.modal .modal-header .modal-close {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -10px;
+  font-size: 21px;
+  cursor: pointer;
+}
+.modal .modal-has-header .modal-view {
+  top: 60px;
+}
+
+@media screen and (max-width: 480px) {
+  .modal .modal-content {
+    height: 100%;
+    top: 0;
+  }
+}
+.password-display-toggle-button {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  margin-top: -0.7em;
+}
+.password-display-toggle-button .password-hidden {
+  display: block;
+}
+.password-display-toggle-button .password-shown {
+  display: none;
+}
+
+.password-display-toggle-show-password .password-display-toggle-button .password-hidden {
+  display: none;
+}
+.password-display-toggle-show-password .password-display-toggle-button .password-shown {
+  display: block;
+}
+
+#change-password-modal .modal-content {
+  max-height: 630px;
+}
+#change-password-modal .modal-content .changeLoginForm {
+  padding: 15px;
+}
+#change-password-modal .modal-content .changeLoginForm .input-group {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+#change-password-modal .modal-content #idp-cp-form div.btn {
+  line-height: 40px;
+  text-align: center;
+}
+#change-password-modal .modal-content #idp-cp-form .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+  font-weight: bold;
+}
+#change-password-modal .modal-content #idp-cp-form .is-loading {
+  display: none;
+}
+#change-password-modal .modal-content #idp-cp-form .is-saved {
+  display: none;
+}
+#change-password-modal .modal-content #idp-cp-form.saving .is-loading {
+  display: block;
+}
+#change-password-modal .modal-content #idp-cp-form.saving .before-save {
+  display: none;
+}
+#change-password-modal .modal-content #idp-cp-form.saved .is-saved {
+  display: block;
+}
+#change-password-modal .modal-content #idp-cp-form.saved .before-save {
+  display: none;
+}
+#change-password-modal .modal-content #idp-cp-form.saving .before-save, #change-password-modal .modal-content #idp-cp-form.saved .before-save {
+  display: none;
+}
+#change-password-modal .modal-content #idp-cp-form.saving .password-display-toggle-button, #change-password-modal .modal-content #idp-cp-form.saved .password-display-toggle-button {
+  display: none;
+}
+#change-password-modal .modal-content .password-checker-ui.alert.alert-info {
+  padding: 0;
+  border: 0;
+  background: none;
+  padding-top: 15px;
+  border-top: 1px solid #ececec;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 414px) {
+  #change-password-modal .modal-content {
+    max-height: 100%;
+  }
+}
+#idp-profile #idp-update-profile-form span.displayonly {
+  background-color: #fff;
+  font-weight: 400;
+  height: 30px;
+}
+#idp-profile #idp-update-profile-form .form-submit-buttons {
+  margin-top: 10px;
+}
+#idp-profile #idp-update-profile-form #mobileConsent {
+  display: inline-block;
+  margin-right: 8px;
+}
+#idp-profile .required-note {
+  color: #999999;
+}
+#idp-profile .input-group {
+  margin-top: 15px;
+}
+#idp-profile .input-group h4 {
+  font-weight: 400;
+  color: #333;
+  padding-bottom: 5px;
+}
+#idp-profile .account-security-option {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 766px) {
+  .profile-management .row label.text-m.left.responsive-top-33 {
+    margin-top: 5px;
+  }
+
+  .profile-management .row label.text-m.left.responsive-top-0 {
+    margin-top: 5px;
+  }
+
+  .profile-management .row div .text-m.left {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .profile-management .row label.text-m.left.responsive-top-33 {
+    margin-top: 5px;
+  }
+
+  .profile-management .row label.text-m.left.responsive-top-0 {
+    margin-top: 5px;
+  }
+
+  .profile-management .row div .text-m.left {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .profile-management .row label.text-m.left.responsive-top-33 {
+    margin-top: 33px;
+  }
+
+  .profile-management .row label.text-m.left.responsive-top-0 {
+    margin-top: 0;
+  }
+
+  .profile-management .row div .text-m.left {
+    margin-top: 23px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .profile-management .row label.text-m.left.responsive-top-33 {
+    margin-top: 33px;
+  }
+
+  .profile-management .row label.text-m.left.responsive-top-0 {
+    margin-top: 0;
+  }
+
+  .profile-management .row div .text-m.left {
+    margin-top: 23px;
+  }
+}

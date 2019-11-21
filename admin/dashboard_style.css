@@ -1,0 +1,66 @@
+body{
+    background:white;
+    overflow-x:hidden;
+}
+.col-sm-2{
+    background-color:#2f4050;
+    height:100vh;
+}
+.col-sm-2 h1{
+    color:white;
+}
+
+.col-sm-10{
+    background-color:white;
+}
+#side-menu li{
+    border:2px solid #1b2630;
+    border-radius: 15px;
+}
+.active{
+    color: #fff;
+    background-color: #27AAE1;
+    font-weight: bold;
+}
+
+#side-menu a{
+    font-size: 14px;
+    color: #9fb1c2;
+    padding-top:20px;
+}
+#side-menu a:hover{
+    background: #1ab394;
+    color: white;
+    font-weight: bold;
+    display: block;
+    transition: all 0.1s ease;
+
+}
+button,input,textarea
+{
+    border:1px solid dashed;
+    padding:0.5em;
+    background-color:rgb(221,216,212);
+    font-size:1em;
+    width:300px; 
+}
+form{
+    margin: 20px 10%;
+}
+table{
+    margin-top:20px;
+}
+.form-group{
+width:30vw;
+text-align:center;
+margin: 0 auto;
+margin-top: 20px;
+}
+.production_table{
+    width:90%;
+}
+.client{
+    font-size:30px;
+    color:green;
+    text-transform:uppercase;
+}

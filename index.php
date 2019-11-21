@@ -306,10 +306,10 @@ require("include/head.php");
 
       </div>
     </section>
+
     <section class="hello">
       
     </section>
-
 
     <!--         Technology Section    -->
     <header class="section-header">

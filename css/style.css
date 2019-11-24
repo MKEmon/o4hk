@@ -1624,7 +1624,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-family: "Montserrat", sans-serif;
     color: #eee;
 }
-
+.footer-text p{
+    text-align:justify;
+    word-spacing: -2px;
+}
 #footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;

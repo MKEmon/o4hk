@@ -3,22 +3,22 @@
         <div class="container">
           <div class="row">
 
-            <div class="col-lg-3 col-md-6 footer-info">
+            <div class="col-lg-4 col-md-6 footer-info">
               <h3><img src="img/layout/transparent_logo.png" height="30" width="30" style="margin: -5px 10px 0px 0px;">O4HK ltd</h3>
-              <div class="footer-text">October4 hk Ltd. developing and maintaining its standard in order to ensure continuous progress. October4 hk Ltd. is committed to develop and produce high quality garments for customers while providing a safe, healthy workplace for our employees and acting as a responsible member of our community.</div>
+              <div class="footer-text"><p>October4 hk Ltd. developing and maintaining its standard in order to ensure continuous progress. October4 hk Ltd. is committed to develop and produce high quality garments for customers while providing a safe, healthy workplace for our employees and acting as a responsible member of our community.</p></div>
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-links">
+            <div class="col-lg-4 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
-                <li><i class="ion-ios-arrow-right"></i> <a href="/">Home</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="/about_us">About us</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="/services">Services</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="/portfolio">Partners</a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="index.php">Home</a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="about_us.php">About us</a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="services.php">Services</a></li>
+                <li><i class="ion-ios-arrow-right"></i> <a href="portfolio2.php">Partners</a></li>
               </ul>
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-contact">
+            <div class="col-lg-4 col-md-6 footer-contact">
               <h4>Contact Us</h4>
               <p>
                 <strong>Unit:</strong> C-03,14/F<br>
@@ -39,13 +39,13 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-6 footer-newsletter">
+            <!-- <div class="col-lg-3 col-md-6 footer-newsletter">
               <h4>Our Newsletter</h4>
               <p>This is our NewsLetter. You can get various news from here.</p>
               <form action="" method="post">
                 <input type="email" name="email"><input type="submit"  value="Subscribe">
               </form>
-            </div>
+            </div> -->
 
           </div>
         </div>

@@ -209,6 +209,21 @@ require("include/head.php");
 
     </div>
 
+    <div class="row">
+
+        <div class="col-md-5 col-xs-12 position" data-aos="fade-left" data-aos-duration="2000">
+            <div class="text">
+                <p>Being relevant and competitive through smart communications</p>
+            </div>
+        </div>
+
+        <div class="col-md-7 col-xs-12" data-aos="fade-up"
+     data-aos-duration="2000">
+            <img src="img/mission/communication.jpg" alt="">
+        </div>
+
+    </div>
+
   </div>
     <!-- <div class="mission_2">
         <div class="img img-fluid">

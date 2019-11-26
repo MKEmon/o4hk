@@ -89,7 +89,7 @@ body{
 </div>
 
 <header class="section-header">
-          <h3>Seam Sealing Process</h3>
+          <h3>Seam Sealing Technology</h3>
 </header>
     <div class="container-fluid">
     <div class="row photos">

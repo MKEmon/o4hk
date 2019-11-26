@@ -313,13 +313,13 @@ require("include/head.php");
     </header>
     <div id="technology">
           <div class="seam_sealing">
-            <a href="technology.php" target="_blank">
+            <a href="seam_sealing_tech.php" target="_blank">
               <p>Seam Sealing / Waterproof</p>
             </a>
           </div>
 
           <div class="sew_free">
-          <a href="technology.php" target="_blank">
+          <a href="sew_free_tech.php" target="_blank">
             <p>Sew Free / Bonding</p>
           </a>
           </div>
@@ -350,7 +350,7 @@ require("include/head.php");
 
             <div class="col-lg-3 col-6 text-center">
             <a href="portfolio.php">
-            <span data-toggle="counter-up">7</span>
+            <span data-toggle="counter-up">10</span>
             <p>Clients</p>
             </a>
               
